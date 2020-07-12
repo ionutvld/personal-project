@@ -353,7 +353,7 @@ article li {
   .about-me {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: 0.25fr repeat(2, 1fr);
+    grid-template-rows: 0.15fr repeat(2, 1fr);
     grid-column-gap: 0px;
     grid-row-gap: 30px;
   }
