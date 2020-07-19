@@ -23,26 +23,27 @@
       </aside>
       <nav class="main-nav">
         <div class="menu-trigger">
-          <button><i class="fas fa-align-justify"></i></button>
-          <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="./more-about-me.html">Find out more about me</a></li>
-            <li><a href="./contact.html">Contact</a></li>
-            <li><a href="./Tic-Tac-Toe.html">Tic Tac Toe</a></li>
-          </ul>
+          <button class="dropbtn"><i class="fas fa-align-justify"></i></button>
+          <div class="dropdown-content">
+            <a href="index.html">Home</a>
+            <a href="more-about-me.html">Find out more about me</a>
+            <a href="contact.html">Contact</a>
+            <a href="Tic-Tac-Toe.html">Games</a>
+          </div>
         </div>
         <div class="main-list ">
           <ul>
             <li><a href="index.html ">Home</a></li>
             <li><a href="more-about-me.html">Find out more about me</a></li>
-            <li><a href="./contact.html">Contact</a></li>
-            <li><a href="./Tic-Tac-Toe.html">Tic Tac Toe</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="Tic-Tac-Toe.html">Games</a></li>
           </ul>
         </div>
       </nav>
     </header>
-    <section class="">
+    <section >
       <h1 class="introduction ">Tic Tac Toe</h1>
+      <!-- <h2>Tic Tac Toe</h2> -->
       <div class="board" id="board">
         <div class="cell" data-cell></div>
         <div class="cell" data-cell></div>
@@ -54,10 +55,10 @@
         <div class="cell" data-cell></div>
         <div class="cell" data-cell></div>
       </div>
-      <div class="winning-message" id="winningMessage">
-        <div data-winning-message-text></div>
-        <button id="restartButton">Restart</button>
-      </div>      
+        <div class="winning-message" id="winningMessage">
+          <div data-winning-message-text></div>
+          <button id="restartButton">Restart</button>
+        </div>
     </section>
     <footer>
       <span><a href="http://linkedin.com/in/vlad-ionut-a579b614b " target="_blank "><i
@@ -69,5 +70,4 @@
     </footer>
   </div>
 </body>
-
 </html>

@@ -37,31 +37,36 @@ header {
   text-align: center;
 }
 
-.menu-trigger button {
+.dropbtn {
   background: none;
   border: none;
   font-size: 4rem;
   margin-left: 20px;
 }
 
-.menu-trigger ul {
-  bottom: 0px;
-  opacity: 0;
-  transform: translateY(10px);
-  transition: all 0.4s ease;
+.menu-trigger {
+  position: relative;
+  display: block;
 }
 
-.menu-trigger li {
+.dropdown-content {
+  display: none;
+  position: absolute;
   background-color: rgb(53, 53, 53);
-  width: 100%;
-  height: 100%;
-  padding: 5px;
+  z-index: 1;
 }
 
-.menu-trigger button:focus+ul {
-  opacity: 1;
-  pointer-events: all;
+.dropdown-content a {
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
 }
+
+.dropdown-content a:hover {background-color: #ddd;}
+
+.menu-trigger:hover .dropdown-content {display: block;}
+
+.menu-trigger:hover .dropbtn {background-color: rgb(161, 222, 240);}
 
 .main-list ul {
   display: none;
@@ -308,6 +313,36 @@ article li {
 
 .winning-message.show {
   display: flex;
+}
+
+@keyframes shakeComputer {
+  0% {
+    transform: translateY(0px);
+  }
+  15% {
+    transform: translateY(-50px);
+  }
+  25% {
+    transform: translateY(0px);
+  }
+  35% {
+    transform: translateY(-50px);
+  }
+  50% {
+    transform: translateY(0px);
+  }
+  65% {
+    transform: translateY(-50px);
+  }
+  75% {
+    transform: translateY(0px);
+  }
+  85% {
+    transform: translateY(-50px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
 }
 
 @media only screen and (min-width: 768px) {
