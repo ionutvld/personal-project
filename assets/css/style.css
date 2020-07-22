@@ -5,11 +5,11 @@
 
 :root {
   font-size: 10px;
-  font-family: "Muli", sans-serif;
+  font-family: 'Muli', sans-serif;
 }
 
 body {
-  background-image: url("../img/background-img.jpg");
+  background-image: url('../img/background-img.jpg');
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
@@ -62,11 +62,17 @@ header {
   display: block;
 }
 
-.dropdown-content a:hover {background-color: #ddd;}
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
 
-.menu-trigger:hover .dropdown-content {display: block;}
+.menu-trigger:hover .dropdown-content {
+  display: block;
+}
 
-.menu-trigger:hover .dropbtn {background-color: rgb(161, 222, 240);}
+.menu-trigger:hover .dropbtn {
+  background-color: rgb(161, 222, 240);
+}
 
 .main-list ul {
   display: none;
@@ -174,8 +180,11 @@ article li {
   list-style: none;
 }
 
-
 /* ----- */
+
+.game{
+  position: relative;
+}
 
 .score {
   color: rgb(224, 224, 224);
@@ -209,6 +218,7 @@ article li {
 .intro h1 {
   font-size: 3rem;
 }
+
 .intro button,
 .match button {
   /* width: 100px;
@@ -222,14 +232,15 @@ article li {
   cursor: pointer;
 }
 
-.match {  
-  margin-top: 150px;
+.match {
+  margin-top: -100px;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   transition: opacity 0.5s ease 0.5s;
 }
+
 .winner {
   color: rgb(224, 224, 224);
   text-align: center;
@@ -244,7 +255,7 @@ article li {
   align-items: center;
 }
 
-.hands img{
+.hands img {
   width: 100px;
   height: 100px;
 }
@@ -327,7 +338,7 @@ div.fadeIn {
 
 .board {
   --cell-size: 100px;
-  --mark-size: calc(var(--cell-size) * .9);
+  --mark-size: calc(var(--cell-size) * 0.9);
 }
 
 .board {
@@ -337,7 +348,7 @@ div.fadeIn {
   align-content: center;
   justify-items: center;
   align-items: center;
-  grid-template-columns: repeat(3, auto)
+  grid-template-columns: repeat(3, auto);
 }
 
 .cell {
@@ -395,7 +406,7 @@ div.fadeIn {
 .board.x .cell:not(.x):not(.circle):hover::after {
   content: '';
   position: absolute;
-  width: calc(var(--mark-size) * .15);
+  width: calc(var(--mark-size) * 0.15);
   height: var(--mark-size);
 }
 
@@ -426,10 +437,9 @@ div.fadeIn {
 
 .cell.circle::after,
 .board.circle .cell:not(.x):not(.circle):hover::after {
-  width: calc(var(--mark-size) * .7);
-  height: calc(var(--mark-size) * .7);
+  width: calc(var(--mark-size) * 0.7);
+  height: calc(var(--mark-size) * 0.7);
   background-color: rgb(161, 222, 240);
-  ;
 }
 
 .winning-message {
@@ -439,7 +449,7 @@ div.fadeIn {
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: rgba(0, 0, 0, .9);
+  background-color: rgba(0, 0, 0, 0.9);
   justify-content: center;
   align-items: center;
   color: rgb(17, 4, 4);
@@ -451,7 +461,7 @@ div.fadeIn {
   font-size: 3rem;
   background-color: rgb(17, 4, 4);
   border: 1px solid black;
-  padding: .25em .5em;
+  padding: 0.25em 0.5em;
   cursor: pointer;
 }
 
@@ -618,8 +628,8 @@ div.fadeIn {
   }
 
   .match {
-    margin-top: -200px;
-    left: 70%;
+    margin-top: -100px;
+    left: 50%;
   }
 }
 
@@ -630,21 +640,11 @@ div.fadeIn {
     margin-right: 30px;
     box-shadow: 0px 4px 9px 9px rgba(148, 146, 148, 0.56);
   }
-
-  .match {
-    margin-top: -400px;
-    left: 65%;
-  }
 }
 
 @media (min-width: 1200px) {
   .container {
     width: 1200px;
     margin: 0 auto;
-  }
-
-  .match {
-    margin-top: -200px;
-    left: 58%;
   }
 }
