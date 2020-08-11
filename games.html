@@ -1,107 +1,136 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Vlad's CV - Games</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="assets/css/reset.css" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Muli&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/2d46a91451.js"
+      crossorigin="anonymous"
+      defer
+    ></script>
+    <script src="assets/js/tic-tac-toe.js" defer></script>
+    <script src="assets/js/rock-paper-scissors.js" defer></script>
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <title>Vlad's CV - Games</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="assets/css/reset.css">
-  <link rel="stylesheet" href="assets/css/style.css">
-  <link href="https://fonts.googleapis.com/css?family=Muli&display=swap" rel="stylesheet">
-  <script src="https://kit.fontawesome.com/2d46a91451.js" crossorigin="anonymous" defer></script>
-  <script src="assets/js/tic-tac-toe.js" defer></script>
-  <script src="assets/js/rock-paper-scissors.js" defer></script>
-</head>
+  <body>
+    <div class="container">
+      <header>
+        <aside>
+          <h1 class="cv-title">
+            <a href="index.html">My Online CV</a>
+          </h1>
+          <img
+            class="profile-img"
+            src="assets/img/img1.jpg"
+            alt="image with me"
+          />
+        </aside>
+        <nav class="main-nav">
+          <div class="menu-trigger">
+            <button class="dropbtn">
+              <i class="fas fa-align-justify"></i>
+            </button>
+            <div class="dropdown-content">
+              <a href="index.html">Home</a>
+              <a href="more-about-me.html">Find out more about me</a>
+              <a href="contact.html">Contact</a>
+              <a href="games.html">Games</a>
+            </div>
+          </div>
+          <div class="main-list">
+            <ul>
+              <li><a href="index.html ">Home</a></li>
+              <li><a href="more-about-me.html">Find out more about me</a></li>
+              <li><a href="contact.html">Contact</a></li>
+              <li><a href="games.html">Games</a></li>
+            </ul>
+          </div>
+        </nav>
+      </header>
+      <section class="games">
+        <h1 class="introduction">Rock Paper and Scissors</h1>
 
-<body>
-  <div class="container">
-    <header>
-      <aside>
-        <h1 class="cv-title">
-          <a href="index.html">My Online CV</a>
-        </h1>
-        <img class="profile-img" src="assets/img/img1.jpg" alt="image with me">
-      </aside>
-      <nav class="main-nav">
-        <div class="menu-trigger">
-          <button class="dropbtn"><i class="fas fa-align-justify"></i></button>
-          <div class="dropdown-content">
-            <a href="index.html">Home</a>
-            <a href="more-about-me.html">Find out more about me</a>
-            <a href="contact.html">Contact</a>
-            <a href="games.html">Games</a>
+        <!-- 1st game----- -->
+        <div class="game">
+          <div class="score">
+            <div class="player-score">
+              <h2>Player</h2>
+              <p>0</p>
+            </div>
+            <div class="computer-score">
+              <h2>Computer</h2>
+              <p>0</p>
+            </div>
+          </div>
+          <div class="intro">
+            <button>Let's Play</button>
+          </div>
+          <div class="match fadeOut">
+            <h2 class="winner">Choose an option</h2>
+            <div class="hands">
+              <img class="player-hand" src="./assets/img/rock.png" alt="rock" />
+              <img
+                class="computer-hand"
+                src="./assets/img/rock.png"
+                alt="rock"
+              />
+            </div>
+            <div class="options">
+              <button class="rock">rock</button>
+              <button class="paper">paper</button>
+              <button class="scissors">scissors</button>
+            </div>
           </div>
         </div>
-        <div class="main-list ">
-          <ul>
-            <li><a href="index.html ">Home</a></li>
-            <li><a href="more-about-me.html">Find out more about me</a></li>
-            <li><a href="contact.html">Contact</a></li>
-            <li><a href="games.html">Games</a></li>
-          </ul>
-        </div>
-      </nav>
-    </header>
-    <section class="games">
-      <h1 class="introduction ">Rock Paper and Scissors</h1>
 
-      <!-- 1st game----- -->
-      <div class="game">
-        <div class="score">
-          <div class="player-score">
-            <h2>Player</h2>
-            <p>0</p>
-          </div>
-          <div class="computer-score">
-            <h2>Computer</h2>
-            <p>0</p>
-          </div>
+        <!-- 2nd game----- -->
+        <h1 class="introduction">Tic Tac Toe</h1>
+        <div class="board" id="board">
+          <div class="cell" data-cell></div>
+          <div class="cell" data-cell></div>
+          <div class="cell" data-cell></div>
+          <div class="cell" data-cell></div>
+          <div class="cell" data-cell></div>
+          <div class="cell" data-cell></div>
+          <div class="cell" data-cell></div>
+          <div class="cell" data-cell></div>
+          <div class="cell" data-cell></div>
         </div>
-        <div class="intro">
-          <button>Let's Play</button>
+        <div class="winning-message" id="winningMessage">
+          <div data-winning-message-text></div>
+          <button id="restartButton">Restart</button>
         </div>
-        <div class="match fadeOut">
-          <h2 class="winner">Choose an option</h2>
-          <div class="hands">
-            <img class="player-hand" src="./assets/img/rock.png" alt="rock" />
-            <img class="computer-hand" src="./assets/img/rock.png" alt="rock" />
-          </div>
-          <div class="options">
-            <button class="rock">rock</button>
-            <button class="paper">paper</button>
-            <button class="scissors">scissors</button>
-          </div>
-        </div>
-      </div>
-
-
-      <!-- 2nd game----- -->
-      <h1 class="introduction ">Tic Tac Toe</h1>
-      <div class="board" id="board">
-        <div class="cell" data-cell></div>
-        <div class="cell" data-cell></div>
-        <div class="cell" data-cell></div>
-        <div class="cell" data-cell></div>
-        <div class="cell" data-cell></div>
-        <div class="cell" data-cell></div>
-        <div class="cell" data-cell></div>
-        <div class="cell" data-cell></div>
-        <div class="cell" data-cell></div>
-      </div>
-      <div class="winning-message" id="winningMessage">
-        <div data-winning-message-text></div>
-        <button id="restartButton">Restart</button>
-      </div>
-    </section>
-    <footer>
-      <span><a href="http://linkedin.com/in/vlad-ionut-a579b614b " target="_blank "><i
-            class="fab fa-linkedin "></i></a></span>
-      <span><a href="https://www.facebook.com/ionut.vlad.16 " target="_blank "><i
-            class="fab fa-facebook "></i></a></span>
-      <span><a href="https://www.instagram.com/ionut_vld/?hl=en " target="_blank "><i
-            class="fab fa-instagram "></i></a></span>
-    </footer>
-  </div>
-</body>
-
+      </section>
+      <footer>
+        <span>
+          <a
+            href="http://linkedin.com/in/vlad-ionut-a579b614b "
+            target="_blank "
+          >
+            <i class="fab fa-linkedin"></i>
+          </a>
+        </span>
+        <span>
+          <a href="https://www.facebook.com/ionut.vlad.16 " target="_blank ">
+            <i class="fab fa-facebook"></i>
+          </a>
+        </span>
+        <span>
+          <a
+            href="https://www.instagram.com/ionut_vld/?hl=en "
+            target="_blank "
+          >
+            <i class="fab fa-instagram"></i>
+          </a>
+        </span>
+      </footer>
+    </div>
+  </body>
 </html>

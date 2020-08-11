@@ -8,7 +8,6 @@ const game = () => {
       const match = document.querySelector(".match");
   
       playBtn.addEventListener("click", () => {
-        introScreen.classList.add("fadeOut");
         match.classList.add("fadeIn");
       });
     };
